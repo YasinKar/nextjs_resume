@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '@nextui-org/react'
-import { User, Github } from 'lucide-react'
+import { User } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
