@@ -30,14 +30,14 @@ const Navbar = () => {
   const menuItems = [
     { label: 'About', path: '#about' },
     { label: 'Skills', path: '#skills' },
-    { label: 'Languages', path: '#languages' },
-    { label: 'Work Experience', path: '#work' },
+    { label: 'Experience', path: '#experience' },
     { label: 'Education', path: '#education' },
+    { label: 'Languages', path: '#languages' },
     { label: 'Contact', path: '#contact' },
   ];
 
   return (
-    <NavbarUI onMenuOpenChange={setIsMenuOpen}>
+    <NavbarUI onMenuOpenChange={setIsMenuOpen} className="fixed">
       <NavbarContent justify="end">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -50,8 +50,11 @@ const Navbar = () => {
 
       <NavbarContent className="hidden sm:flex gap-7" justify="center">
         {menuItems.map((item, index) => (
-          <NavbarItem key={`${item}-${index}`} isActive={currentHash === item.path}>
-            <Link color={currentHash === item.path ? 'primary' : 'foreground'} href={item.path}>
+          <NavbarItem
+            key={`${item}-${index}`}
+            isActive={currentHash === item.path}
+          >
+            <Link color={currentHash === item.path ? 'danger' : 'foreground'} href={item.path}>
               {item.label}
             </Link>
           </NavbarItem>
@@ -63,13 +66,13 @@ const Navbar = () => {
           <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
-      
+
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem isActive={currentHash === item.path} key={`${item}-${index}`}>
             <Link
               className="w-full"
-              color={currentHash === item.path ? 'primary' : 'foreground'}
+              color={currentHash === item.path ? 'danger' : 'foreground'}
               href={item.path}
               size="lg"
             >

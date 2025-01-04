@@ -5,7 +5,7 @@ import { ScrollShadow as ScrollShadowUI } from "@nextui-org/react";
 
 const ScrollShadow = ({ children }: { children: React.ReactNode }) => {
     return (
-        <ScrollShadowUI className="container relative h-full hide-scrollbar">
+        <ScrollShadowUI className='relative container space-y-10 sm:space-y-20'>
             {children}
         </ScrollShadowUI>
     )

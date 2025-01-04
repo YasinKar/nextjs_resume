@@ -4,12 +4,12 @@
 
 .text-gradient {
   background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
-      #ffc7fc 0.89%,
-      #ff9df5 17.23%,
-      #fc81f1 42.04%,
-      #ff6ceb 55.12%,
-      #e256c8 71.54%,
-      #ff00d4 100%);
+      #f5d0fe 0.89%,
+      #f0abfc 17.23%,
+      #e879f9 42.04%,
+      #d946ef 55.12%,
+      #d946ef 71.54%,
+      #a21caf 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -31,4 +31,8 @@
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+.title{
+  @apply font-bold text-2xl sm:text-3xl text-center
 }
