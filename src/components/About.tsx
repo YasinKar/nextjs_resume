@@ -10,7 +10,7 @@ const About = () => {
         <section className='flex flex-col space-y-10 sm:space-y-20  justify-center items-center text-center mt-10' id='about'>
             <h1 className="font-bold text-3xl leading-relaxed sm:text-7xl" style={{ lineHeight: "1.5" }}>
                 <strong>Yasin Karbasi<br />{" "}</strong>
-                I'm <span className="text-gradient ">{'<Full Stack />'} </span> Developer
+                I&apos;m <span className="text-gradient ">{"<Full Stack />"} </span> Developer
             </h1>
             <div className='flex justify-center items-center space-x-4 sm:space-x-10'>
                 <Button className='text-medium p-5' color="danger" variant="shadow" endContent={<User />}>
