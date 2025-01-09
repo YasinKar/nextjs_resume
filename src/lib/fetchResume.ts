@@ -1,4 +1,4 @@
 export async function fetchResume() {
-    const response = await fetch(process.env.DOMAIN || 'https://yasin.monster/resume.json');
+    const response = await fetch('https://yasin.monster/resume.json');
     return response.json();
 }
