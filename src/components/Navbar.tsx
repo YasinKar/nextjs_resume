@@ -13,7 +13,7 @@ import {
 } from "@nextui-org/react";
 import ThemeSwitcher from "./ThemeSwitcher";
 
-const Navbar = () => {
+const Navbar = ({ fullName }: { fullName: string }) => {
   const [currentHash, setCurrentHash] = useState<string>("");
 
   useEffect(() => {
@@ -30,6 +30,7 @@ const Navbar = () => {
   const menuItems = [
     { label: 'About', path: '#about' },
     { label: 'Skills', path: '#skills' },
+    { label: 'Projects', path: '#projects' },
     { label: 'Experience', path: '#experience' },
     { label: 'Education', path: '#education' },
     { label: 'Languages', path: '#languages' },
@@ -37,14 +38,14 @@ const Navbar = () => {
   ];
 
   return (
-    <NavbarUI onMenuOpenChange={setIsMenuOpen} className="fixed">
+    <NavbarUI onMenuOpenChange={setIsMenuOpen} position="sticky">
       <NavbarContent justify="end">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
         <NavbarBrand>
-          <p className="font-bold text-large">Yasin Karbasi</p>
+          <p className="font-bold text-large">{fullName}</p>
         </NavbarBrand>
       </NavbarContent>
 
@@ -71,10 +72,9 @@ const Navbar = () => {
         {menuItems.map((item, index) => (
           <NavbarMenuItem isActive={currentHash === item.path} key={`${item}-${index}`}>
             <Link
-              className="w-full"
+              className="text-2xl font-medium"
               color={currentHash === item.path ? 'danger' : 'foreground'}
               href={item.path}
-              size="lg"
             >
               {item.label}
             </Link>

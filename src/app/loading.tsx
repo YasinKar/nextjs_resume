@@ -3,7 +3,7 @@ import React from 'react'
 
 const loading = () => {
   return (
-    <Spinner color="danger" />
+    <Spinner color="danger" className='h-screen w-screen flex justify-center items-center' />
   )
 }
 

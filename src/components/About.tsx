@@ -5,12 +5,23 @@ import { Download, Github, Instagram, Linkedin, Send, User } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
-const About = () => {
+type AboutProp = {
+    fullName: string,
+    profession: string,
+    resumeFile: string,
+    github: string,
+    instagram: string,
+    telegram: string,
+    likedin: string,
+    about: string
+}
+
+const About: React.FC<AboutProp> = ({fullName, profession, resumeFile, github, instagram, telegram, likedin, about}) => {
     return (
-        <section className='flex flex-col space-y-10 sm:space-y-20  justify-center items-center text-center mt-10' id='about'>
+        <div className='section flex flex-col mt-10' id='about'>
             <h1 className="font-bold text-3xl leading-relaxed sm:text-7xl" style={{ lineHeight: "1.5" }}>
-                <strong>Yasin Karbasi<br />{" "}</strong>
-                I&apos;m <span className="text-gradient ">{"<Full Stack />"} </span> Developer
+                <strong>{fullName}<br />{" "}</strong>
+                I&apos;m <span className="text-gradient ">{`< ${profession} />`} </span> Developer
             </h1>
             <div className='flex justify-center items-center space-x-4 sm:space-x-10'>
                 <Button className='text-medium p-5' color="danger" variant="shadow" endContent={<User />}>
@@ -19,30 +30,30 @@ const About = () => {
                     </Link>
                 </Button>
                 <Button className='text-medium p-5' color="danger" variant="bordered" endContent={<Download />}>
-                    <Link href={'#contact'}>
+                    <Link href={resumeFile}>
                         Download CV
                     </Link>
                 </Button>
             </div>
             <div className='flex space-x-10 sm:space-x-20'>
-                <Link href={''}>
-                    <Github className='size-8 sm:size-10 hover:text-fuchsia-500' />
+                <Link href={github}>
+                    <Github className='size-8 sm:size-10 hover:text-danger' />
                 </Link>
-                <Link href={''}>
-                    <Instagram className='size-8 sm:size-10 hover:text-fuchsia-500' />
+                <Link href={instagram}>
+                    <Instagram className='size-8 sm:size-10 hover:text-danger' />
                 </Link>
-                <Link href={''}>
-                    <Send className='size-8 sm:size-10 hover:text-fuchsia-500' />
+                <Link href={telegram}>
+                    <Send className='size-8 sm:size-10 hover:text-danger' />
                 </Link>
-                <Link href={''}>
-                    <Linkedin className='size-8 sm:size-10 hover:text-fuchsia-500' />
+                <Link href={likedin}>
+                    <Linkedin className='size-8 sm:size-10 hover:text-danger' />
                 </Link>
             </div>
             <div className='space-y-5'>
                 <h2 className='title'>About</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas soluta facere, eveniet eaque adipisci, doloribus numquam vel iusto dolore provident totam eos cupiditate dicta! Sint consequuntur tempore fugit laboriosam saepe.</p>
+                <p>{about}</p>
             </div>
-        </section>
+        </div>
     )
 }
 

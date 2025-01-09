@@ -6,22 +6,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Project } from '@/types/project.type'
 import { Card, CardBody, Image, CardFooter } from "@nextui-org/react";
 import Link from 'next/link';
 
-const Projects = () => {
-  const projects: Project[] = [
-    { img: 'src', demo: 'localhost', description: 'txt', title: 'txt', id: 2 },
-    { img: 'src', demo: 'localhost', description: 'txt', title: 'txt', id: 1 },
-    { img: 'src', demo: 'localhost', description: 'txt', title: 'txt', id: 3 },
-    { img: 'src', demo: 'localhost', description: 'txt', title: 'txt', id: 4 },
-    { img: 'src', demo: 'localhost', description: 'txt', title: 'txt', id: 5 },
-    { img: 'src', demo: 'localhost', description: 'txt', title: 'txt', id: 8 },
-  ]
+type ProjectsProps = {
+  projects: { id: number, image: string, demo: string, title: string, description: string }[]
+}
+
+const Projects: React.FC<ProjectsProps> = ({ projects }) => {
 
   return (
-    <div className='text-center space-y-5' id='education'>
+    <div className='section' id='projects'>
       <h2 className='title'>Projects</h2>
       <div>
         <Swiper
@@ -29,7 +24,7 @@ const Projects = () => {
           navigation={true}
           loop={true}
           slidesPerView={1}
-          centeredSlides={true}
+          centeredSlides
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -37,7 +32,7 @@ const Projects = () => {
           breakpoints={{
             '@0.00': {
               slidesPerView: 1,
-              centeredSlides : true
+              centeredSlides: true
             },
             '@0.75': {
               slidesPerView: 2,
@@ -56,7 +51,7 @@ const Projects = () => {
           {projects.map((project) => (
             <SwiperSlide key={project.id}>
               <Link href={project.demo}>
-                <Card className="py-4" isBlurred shadow='lg' isPressable>
+                <Card className="py-4" isBlurred shadow='sm' isPressable>
                   <CardBody className="overflow-visible py-2">
                     <Image
                       alt="Card background"

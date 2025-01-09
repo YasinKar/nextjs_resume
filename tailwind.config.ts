@@ -14,6 +14,9 @@ export default {
         center: true,
         padding: '5px'
       },
+      colors: {
+        danger: '#F31260'
+      }
     },
   },
   darkMode: "class",

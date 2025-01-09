@@ -3,23 +3,20 @@
 import { Avatar } from '@nextui-org/react'
 import React from 'react'
 
-const Skills = () => {
+type SkillsProps = {
+    skills: { id: number, image: string }[]
+}
+
+const Skills: React.FC<SkillsProps> = ({ skills }) => {
     return (
-        <div className='text-center space-y-5' id='skills'>
+        <div className='section' id='skills'>
             <h2 className='title'>Skills</h2>
             <div className='grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-8 items-center justify-items-center'>
-                <Avatar isBordered radius="md" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar isBordered radius="md" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar isBordered radius="md" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar isBordered radius="md" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar isBordered radius="md" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar isBordered radius="md" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar isBordered radius="md" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar isBordered radius="md" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar isBordered radius="md" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar isBordered radius="md" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar isBordered radius="md" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
-                <Avatar isBordered radius="md" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
+                {
+                    skills.map(skill => (
+                        <Avatar key={skill.id} isBordered radius="md" src={skill.image} className='sm:h-16 sm:w-16 bg-white p-1' />
+                    ))
+                }
             </div>
         </div>
     )

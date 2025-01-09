@@ -2,37 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-gradient {
-  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
-      #f5d0fe 0.89%,
-      #f0abfc 17.23%,
-      #e879f9 42.04%,
-      #d946ef 55.12%,
-      #d946ef 71.54%,
-      #a21caf 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
+@layer utilities {
+  .text-gradient {
+    background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
+        #f788af 0.89%,
+        #f05188 17.23%,
+        #f13e7d 42.04%,
+        #f33376 55.12%,
+        #f11d68 71.54%,
+        #F31260 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
 
-.left-light {
-  background-image: radial-gradient(closest-side, rgba(88, 16, 124, 0.3), #000);
-}
+  .title {
+    @apply font-bold text-2xl sm:text-3xl text-center
+  }
 
-.right-light {
-  background-image: radial-gradient(closest-side, rgba(26, 15, 122, 0.3), #000);
-}
+  .child {
+    opacity: 0;
+    transform: translateY(50px);
+  }
 
-.hide-scrollbar {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 2s ease, transform 0.5s ease;
+  }
 
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.title{
-  @apply font-bold text-2xl sm:text-3xl text-center
+  .section {
+    @apply scroll-mt-28 space-y-10 sm:space-y-20 items-center text-center
+  }
 }

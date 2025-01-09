@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import React, { useEffect, useState } from "react";
 import { NextUIProvider } from "@nextui-org/react";
@@ -17,7 +17,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     return (
         <NextUIProvider className={theme}>
             <NextThemesProvider attribute="class" defaultTheme="dark">
-                {children}
+                    {children}
             </NextThemesProvider>
         </NextUIProvider >
     )

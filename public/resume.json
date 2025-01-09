@@ -1,0 +1,106 @@
+{
+    "fullName": "Yasin Karbasi",
+    "profession": "Full Stack",
+    "resumeFile": "/Yasin_Karbasi.docx",
+    "github": "https://github.com/YasinKar/",
+    "instagram": "https://www.instagram.com/yasin_karbasix/",
+    "telegram": "https://t.me/ichbinyas",
+    "likedin": "",
+    "about": "Creative developer with extensive experience in designing and developing modern applications, proficient in modern technologies and software engineering methodologies,excelling in problem-solving and performance optimization, passionate about staying updated with industry trends and continuously improving skills",
+    "email": "yasinkardev@gmail.com",
+    "skills": [
+        {
+            "id": 1,
+            "image": "./techs/Celery.webp"
+        },
+        {
+            "id": 2,
+            "image": "./techs/django.webp"
+        },
+        {
+            "id": 3,
+            "image": "./techs/docker.webp"
+        },
+        {
+            "id": 4,
+            "image": "./techs/git.webp"
+        },
+        {
+            "id": 5,
+            "image": "./techs/nextjs.webp"
+        },
+        {
+            "id": 6,
+            "image": "./techs/nginx.webp"
+        },
+        {
+            "id": 7,
+            "image": "./techs/python.webp"
+        },
+        {
+            "id": 8,
+            "image": "./techs/react.webp"
+        },
+        {
+            "id": 9,
+            "image": "./techs/tailwindcss.webp"
+        },
+        {
+            "id": 10,
+            "image": "./techs/typescript.webp"
+        }
+    ],
+    "experiences": [
+        {
+            "id": 1,
+            "title": "Freelancing",
+            "description": "Interaction and acquaintance with different employers and challenges such as on-time delivery and implementation of different systems"
+        },
+        {
+            "id": 2,
+            "title": "Team Works",
+            "description": "Experience including collaboration and teamwork using Git tools"
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "image": "",
+            "demo": "",
+            "title": "E-commerce Website",
+            "description": "increased SEO with Next.js and design backend with django and develope OTP authentication with JWT standard and managing tasks by celery."
+        },
+        {
+            "id": 2,
+            "image": "",
+            "demo": "",
+            "title": "",
+            "description": ""
+        }
+    ],
+    "educations": [
+        {
+            "id": 1,
+            "year": "2023 - Now",
+            "degree": "Diploma",
+            "field": "Mathematics"
+        }
+    ],
+    "languages": [
+        {
+            "id": 1,
+            "language": "English",
+            "status": "proficient"
+        },
+        {
+            "id": 2,
+            "language": "Persian",
+            "status": "native"
+        },
+        {
+            "id": 3,
+            "language": "Turkish",
+            "status": "native"
+        }
+    ]
+}

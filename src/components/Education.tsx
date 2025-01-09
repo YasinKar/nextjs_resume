@@ -3,9 +3,13 @@
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from "@nextui-org/react";
 import React from 'react'
 
-const Education = () => {
+type EducationProps = {
+  educations: { id: number, year: string, degree: string, field: string }[]
+}
+
+const Education: React.FC<EducationProps> = ({ educations }) => {
   return (
-    <div className='text-center space-y-5' id='education'>
+    <div className='section' id='education'>
       <h2 className='title'>Education</h2>
       <div>
         <Table isStriped removeWrapper aria-label="Example static collection table">
@@ -15,11 +19,15 @@ const Education = () => {
             <TableColumn>FIELD</TableColumn>
           </TableHeader>
           <TableBody>
-            <TableRow key="1">
-              <TableCell>2015 - Now</TableCell>
-              <TableCell>Diploma</TableCell>
-              <TableCell>Mathematics</TableCell>
-            </TableRow>
+            {
+              educations.map(education => (
+                <TableRow key={education.id}>
+                  <TableCell>{education.year}</TableCell>
+                  <TableCell>{education.degree}</TableCell>
+                  <TableCell>{education.field}</TableCell>
+                </TableRow>
+              ))
+            }
           </TableBody>
         </Table>
       </div>
