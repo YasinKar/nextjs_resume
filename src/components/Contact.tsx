@@ -47,7 +47,7 @@ const Contact: React.FC<ContactProps> = ({ email, github, instagram, likedin, te
                     message: 'Something went wrong. Please try again.'
                 });
             }
-        } catch (error: any) {
+        } catch {
             setResponse({
                 type: 'danger',
                 message: 'Server error. Please try again later.'
@@ -76,7 +76,7 @@ const Contact: React.FC<ContactProps> = ({ email, github, instagram, likedin, te
                     </Button>
                 </Form>
 
-                {response && 
+                {response &&
                     ''
                 }
 
